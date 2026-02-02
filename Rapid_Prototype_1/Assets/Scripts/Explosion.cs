@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Explosion : MonoBehaviour
 {
+    [SerializeField]
+    float duration = 0.25f;
+    
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(this.gameObject, 2.5f);
+        Destroy(this.gameObject, duration);
     }
 
     // Update is called once per frame
