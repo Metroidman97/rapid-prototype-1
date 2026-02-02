@@ -7,8 +7,16 @@
       "RelativeMoniker": "D:0:0:{CEA888C6-B799-515A-D2E0-425150809309}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CEA888C6-B799-515A-D2E0-425150809309}|Assembly-CSharp.csproj|c:\\users\\owner\\onedrive\\documents\\college stuff\\ucf\\unity temp\\rapid prototype 1\\rapid-prototype-1\\rapid_prototype_1\\assets\\scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CEA888C6-B799-515A-D2E0-425150809309}|Assembly-CSharp.csproj|C:\\Users\\Owner\\OneDrive\\Documents\\College stuff\\UCF\\Unity temp\\Rapid Prototype 1\\rapid-prototype-1\\Rapid_Prototype_1\\assets\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEA888C6-B799-515A-D2E0-425150809309}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEA888C6-B799-515A-D2E0-425150809309}|Assembly-CSharp.csproj|C:\\Users\\Owner\\OneDrive\\Documents\\College stuff\\UCF\\Unity temp\\Rapid Prototype 1\\rapid-prototype-1\\Rapid_Prototype_1\\assets\\scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CEA888C6-B799-515A-D2E0-425150809309}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEA888C6-B799-515A-D2E0-425150809309}|Assembly-CSharp.csproj|C:\\Users\\Owner\\OneDrive\\Documents\\College stuff\\UCF\\Unity temp\\Rapid Prototype 1\\rapid-prototype-1\\Rapid_Prototype_1\\assets\\scripts\\explosion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEA888C6-B799-515A-D2E0-425150809309}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\explosion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CEA888C6-B799-515A-D2E0-425150809309}|Assembly-CSharp.csproj|C:\\Users\\Owner\\OneDrive\\Documents\\College stuff\\UCF\\Unity temp\\Rapid Prototype 1\\rapid-prototype-1\\Rapid_Prototype_1\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,30 +30,54 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Bullet.cs",
-              "DocumentMoniker": "C:\\Users\\Owner\\OneDrive\\Documents\\College stuff\\UCF\\Unity temp\\Rapid Prototype 1\\rapid-prototype-1\\Rapid_Prototype_1\\Assets\\Scripts\\Bullet.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Bullet.cs",
-              "ToolTip": "C:\\Users\\Owner\\OneDrive\\Documents\\College stuff\\UCF\\Unity temp\\Rapid Prototype 1\\rapid-prototype-1\\Rapid_Prototype_1\\Assets\\Scripts\\Bullet.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Bullet.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAlAAAA",
+              "DocumentIndex": 3,
+              "Title": "Explosion.cs",
+              "DocumentMoniker": "C:\\Users\\Owner\\OneDrive\\Documents\\College stuff\\UCF\\Unity temp\\Rapid Prototype 1\\rapid-prototype-1\\Rapid_Prototype_1\\Assets\\Scripts\\Explosion.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Explosion.cs",
+              "ToolTip": "C:\\Users\\Owner\\OneDrive\\Documents\\College stuff\\UCF\\Unity temp\\Rapid Prototype 1\\rapid-prototype-1\\Rapid_Prototype_1\\Assets\\Scripts\\Explosion.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Explosion.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-01T01:33:05.409Z",
+              "WhenOpened": "2026-02-02T01:41:28.347Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Enemy.cs",
+              "DocumentMoniker": "C:\\Users\\Owner\\OneDrive\\Documents\\College stuff\\UCF\\Unity temp\\Rapid Prototype 1\\rapid-prototype-1\\Rapid_Prototype_1\\Assets\\Scripts\\Enemy.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy.cs",
+              "ToolTip": "C:\\Users\\Owner\\OneDrive\\Documents\\College stuff\\UCF\\Unity temp\\Rapid Prototype 1\\rapid-prototype-1\\Rapid_Prototype_1\\Assets\\Scripts\\Enemy.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T01:16:33.96Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Bullet.cs",
+              "DocumentMoniker": "C:\\Users\\Owner\\OneDrive\\Documents\\College stuff\\UCF\\Unity temp\\Rapid Prototype 1\\rapid-prototype-1\\Rapid_Prototype_1\\Assets\\Scripts\\Bullet.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Bullet.cs",
+              "ToolTip": "C:\\Users\\Owner\\OneDrive\\Documents\\College stuff\\UCF\\Unity temp\\Rapid Prototype 1\\rapid-prototype-1\\Rapid_Prototype_1\\Assets\\Scripts\\Bullet.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Bullet.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-01T01:33:05.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\Users\\Owner\\OneDrive\\Documents\\College stuff\\UCF\\Unity temp\\Rapid Prototype 1\\rapid-prototype-1\\Rapid_Prototype_1\\Assets\\Scripts\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
               "ToolTip": "C:\\Users\\Owner\\OneDrive\\Documents\\College stuff\\UCF\\Unity temp\\Rapid Prototype 1\\rapid-prototype-1\\Rapid_Prototype_1\\Assets\\Scripts\\PlayerController.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAQAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABRAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-01T01:02:48.222Z"
             },
@@ -57,7 +89,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
               "ToolTip": "C:\\Users\\Owner\\OneDrive\\Documents\\College stuff\\UCF\\Unity temp\\Rapid Prototype 1\\rapid-prototype-1\\Rapid_Prototype_1\\Assets\\Scripts\\GameManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAXAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADEAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-01T00:50:19.818Z",
               "EditorCaption": ""
