@@ -430,9 +430,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenLimit: 0
   screenTop: 0
-  enemySpawnPrefab: {fileID: 0}
   enemy1Prefab: {fileID: 8784923794602885367, guid: 1972139d8bfe4fe4ba283064a3a90a45, type: 3}
-  playerPrefab: {fileID: 4866157065334152272, guid: abbef9b78274fb64ab6a45775bab7b75, type: 3}
+  playerPrefab: {fileID: 3607792371863254821, guid: 44260c8595ef14a4292a1ab3f60e4e31, type: 3}
   scoreText: {fileID: 1713285599}
   score: 0
   level: 2
