@@ -30,6 +30,7 @@ public class Enemy : MonoBehaviour
             Destroy(collision.gameObject);
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             gameManager.AddScore(scoreValue);
+            gameManager.DecrimentEnemies();
             Destroy(this.gameObject);
         }
     }

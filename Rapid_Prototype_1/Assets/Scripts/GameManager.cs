@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
@@ -27,6 +28,8 @@ public class GameManager : MonoBehaviour
     // Current level
     public string level;
 
+    // Number of currently active enemies
+    private int remainingEnemies = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -52,7 +55,13 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // Close game instantly by pressing escape
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
+        CheckEnemies();
     }
 
     public void AddScore(int earnedScore)
@@ -71,12 +80,14 @@ public class GameManager : MonoBehaviour
         // Select formation based on current level number
         switch(level)
         {
+            // Enemy formation for level 1
             case "Level1":
-                spawnGrid[0] = new float[3] { -2f, 0f, 2f };
+                spawnGrid[0] = new float[3] { -2f, 0f, 2f };  // Each row is a row of enemies, and each number of the X coordinate of their formation position
                 spawnGrid[1] = new float[5] { -4f, -2f, 0f, 2f, 4f };
                 spawnGrid[2] = new float[7] { -6f, -4f, -2f, 0f, 2f, 4f, 6f };
                 break;
 
+            // Enemy formation for level 2
             case "Level2":
                 spawnGrid[0] = new float[4] { -6f, -4f, 4f, 6f };
                 spawnGrid[1] = new float[5] { -4f, -2f, 0f, 2f, 4f };
@@ -88,6 +99,7 @@ public class GameManager : MonoBehaviour
 
         for (int i = 0; i < spawnGrid.Length; i++)
         {
+            // The Y coordinate for each enemy row
             float Yposition = 10f; // Match the current sub array with the formation row
 
             switch (i)
@@ -108,7 +120,26 @@ public class GameManager : MonoBehaviour
             for (int j = 0; j < spawnGrid[i].Length; j++)
             {
                 Instantiate(enemy1Prefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity);
+
+                // Increment the enemy counter with each spawn
+                remainingEnemies++;
             }
+        }
+    }
+
+    public void DecrimentEnemies()
+    {
+        // Decriment the remaining enemy count every time one is destroyed
+        remainingEnemies--;
+    }
+
+    void CheckEnemies()
+    {
+        // Check if every enemy has been killed
+        if (remainingEnemies == 0 && Input.GetKeyDown(KeyCode.Space))
+        {
+            // Code to advance to the next scene goes here
+            Debug.Log("Next Level");
         }
     }
 }
