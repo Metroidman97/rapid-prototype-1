@@ -13,6 +13,11 @@ public class GameManager : MonoBehaviour
 
     // Enemy prefabs
     public GameObject enemy1Prefab;
+    public GameObject enemy2Prefab;
+    public GameObject enemy3Prefab;
+    public GameObject enemy4Prefab;
+    public GameObject enemy5Prefab;
+    public GameObject enemy6Prefab;
 
     // Enemy spawn grid array
     private float[][] spawnGrid = new float[3][];
@@ -82,7 +87,7 @@ public class GameManager : MonoBehaviour
         {
             // Enemy formation for level 1
             case "Level1":
-                spawnGrid[0] = new float[3] { -2f, 0f, 2f };  // Each row is a row of enemies, and each number of the X coordinate of their formation position
+                spawnGrid[0] = new float[3] { -2f, 0f, 2f };  // Each row is a row of enemies, and each number is the X coordinate of their formation position
                 spawnGrid[1] = new float[5] { -4f, -2f, 0f, 2f, 4f };
                 spawnGrid[2] = new float[7] { -6f, -4f, -2f, 0f, 2f, 4f, 6f };
                 break;

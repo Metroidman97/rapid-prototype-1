@@ -430,7 +430,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenLimit: 0
   screenTop: 0
-  enemy1Prefab: {fileID: 8784923794602885367, guid: 1972139d8bfe4fe4ba283064a3a90a45, type: 3}
+  enemy1Prefab: {fileID: 893247037955759341, guid: a7e9542f9842e6045951f401f3ad3b98, type: 3}
+  enemy2Prefab: {fileID: 5780968069658490484, guid: 6a29b95b2bc64104a8f2abd1dbbafc0d, type: 3}
+  enemy3Prefab: {fileID: 1940256794547781241, guid: b9e0343d14c49624891f9949b7b3aad5, type: 3}
+  enemy4Prefab: {fileID: 6161095900357876918, guid: f3f65c1ba2f1ac340b0a271b52d08097, type: 3}
+  enemy5Prefab: {fileID: 8981044541125093833, guid: b9cd8969edce70f44a0fc190a218e106, type: 3}
+  enemy6Prefab: {fileID: 8981044541125093833, guid: b9cd8969edce70f44a0fc190a218e106, type: 3}
   playerPrefab: {fileID: 536823610483456759, guid: c90ab71d1dfeb054ea42ad5fdc435692, type: 3}
   scoreText: {fileID: 1713285599}
   score: 0
