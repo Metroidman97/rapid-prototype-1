@@ -124,10 +124,50 @@ public class GameManager : MonoBehaviour
 
             for (int j = 0; j < spawnGrid[i].Length; j++)
             {
-                Instantiate(enemy1Prefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity);
+                switch (i)
+                {
+                    case 0:
+                        if (level == "Level1")
+                        {
+                            Instantiate(enemy3Prefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity);    // Spawn different enemies in different rows
+                            remainingEnemies++;     // Increment the enemy counter with each spawn
+                        }
+                        else if (level == "Level2")
+                        {
+                            Instantiate(enemy6Prefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity);    // Spawn different enemies based on the current level
+                            remainingEnemies++;
+                        }
+                        break;
 
-                // Increment the enemy counter with each spawn
-                remainingEnemies++;
+                    case 1:
+                        if (level == "Level1")
+                        {
+                            Instantiate(enemy2Prefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity);    
+                            remainingEnemies++;     
+                        }
+                        else if (level == "Level2")
+                        {
+                            Instantiate(enemy5Prefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity);    
+                            remainingEnemies++;
+                        }
+                        break;
+
+                    case 2:
+                        if (level == "Level1")
+                        {
+                            Instantiate(enemy1Prefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity);
+                            remainingEnemies++;
+                        }
+                        else if (level == "Level2")
+                        {
+                            Instantiate(enemy3Prefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity);    
+                            remainingEnemies++;
+                        }
+                        break;
+                }
+                
+
+                
             }
         }
     }
