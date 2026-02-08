@@ -36,6 +36,12 @@ public class GameManager : MonoBehaviour
     // Number of currently active enemies
     private int remainingEnemies = 0;
 
+    // Number of enemies in their final position
+    //private int inPosition = 0;
+
+    // Enemy list
+    private List<GameObject> enemyList = new List<GameObject>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,6 +73,8 @@ public class GameManager : MonoBehaviour
         }
 
         CheckEnemies();
+
+        // Wait until all enemies are in position, then randomly call an enemy from the list to divebomb the player
     }
 
     public void AddScore(int earnedScore)
@@ -129,12 +137,12 @@ public class GameManager : MonoBehaviour
                     case 0:
                         if (level == "Level1")
                         {
-                            Instantiate(enemy3Prefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity);    // Spawn different enemies in different rows
+                            enemyList.Add(Instantiate(enemy3Prefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity));    // Spawn different enemies in different rows
                             remainingEnemies++;     // Increment the enemy counter with each spawn
                         }
                         else if (level == "Level2")
                         {
-                            Instantiate(enemy6Prefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity);    // Spawn different enemies based on the current level
+                            enemyList.Add(Instantiate(enemy6Prefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity));    // Spawn different enemies based on the current level
                             remainingEnemies++;
                         }
                         break;
@@ -142,12 +150,12 @@ public class GameManager : MonoBehaviour
                     case 1:
                         if (level == "Level1")
                         {
-                            Instantiate(enemy2Prefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity);    
+                            enemyList.Add(Instantiate(enemy2Prefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity));    
                             remainingEnemies++;     
                         }
                         else if (level == "Level2")
                         {
-                            Instantiate(enemy5Prefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity);    
+                            enemyList.Add(Instantiate(enemy5Prefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity));    
                             remainingEnemies++;
                         }
                         break;
@@ -155,12 +163,12 @@ public class GameManager : MonoBehaviour
                     case 2:
                         if (level == "Level1")
                         {
-                            Instantiate(enemy1Prefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity);
+                            enemyList.Add(Instantiate(enemy1Prefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity));
                             remainingEnemies++;
                         }
                         else if (level == "Level2")
                         {
-                            Instantiate(enemy3Prefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity);    
+                            enemyList.Add(Instantiate(enemy4Prefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity));    
                             remainingEnemies++;
                         }
                         break;
@@ -187,4 +195,23 @@ public class GameManager : MonoBehaviour
             Debug.Log("Next Level");
         }
     }
+
+    /*
+    public void EnemyInPosition()
+    {
+        inPosition++;
+    }
+
+    public bool EveryoneInPosition()
+    {
+        if ((level == "Level1" && inPosition == 15) || (level == "Level2" && inPosition == 15))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    */
 }
