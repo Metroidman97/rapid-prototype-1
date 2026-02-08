@@ -216,7 +216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8701480167019428283, guid: 9348f67cf014d23448eaedefc8e7ff7b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 238.98
+      value: 238.97998
       objectReference: {fileID: 0}
     - target: {fileID: 8701480167019428283, guid: 9348f67cf014d23448eaedefc8e7ff7b, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -564,10 +564,60 @@ MonoBehaviour:
   screenLimit: 0
   screenTop: 0
   enemy1Prefab: {fileID: 8784923794602885367, guid: 1972139d8bfe4fe4ba283064a3a90a45, type: 3}
+  enemy2Prefab: {fileID: 0}
+  enemy3Prefab: {fileID: 0}
+  enemy4Prefab: {fileID: 0}
+  enemy5Prefab: {fileID: 0}
+  enemy6Prefab: {fileID: 0}
   playerPrefab: {fileID: 536823610483456759, guid: c90ab71d1dfeb054ea42ad5fdc435692, type: 3}
   scoreText: {fileID: 362867443}
   score: 0
   level: 2
+--- !u!1 &1773148967
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1773148968}
+  - component: {fileID: 1773148969}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1773148968
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773148967}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1773148969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773148967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7135a0d9f68714c4395ba386352c2e61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SFXObject: {fileID: 8671735399085468680, guid: 0c567cc9ce6b99747a89e0b72d15416a, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -576,3 +626,4 @@ SceneRoots:
   - {fileID: 615997878}
   - {fileID: 604855147}
   - {fileID: 477706796}
+  - {fileID: 1773148968}
