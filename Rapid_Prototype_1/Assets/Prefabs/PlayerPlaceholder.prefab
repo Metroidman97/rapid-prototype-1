@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1311569492658746696}
   m_Layer: 0
   m_Name: PlayerPlaceholder
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,5 +99,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6
   input: 0
+  bulletOffset: 0.25
   lives: 0
   bulletPrefab: {fileID: 7954565256047884563, guid: 026afc5c58fd9914a810d6e81c2c2f55, type: 3}
+  shootSFX: {fileID: 0}
+  deathSFX: {fileID: 0}

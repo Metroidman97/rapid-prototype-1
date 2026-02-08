@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     // Declare and initialize variables
     public float speed = 6f;
     public float input;
+    public float bulletOffset = 0.25f;
     public int lives;
 
     private GameManager gameManager;
@@ -57,7 +58,8 @@ public class PlayerController : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(bulletPrefab, transform.position + new Vector3(0.25f,0.5f), Quaternion.identity);
+            Instantiate(bulletPrefab, transform.position + new Vector3(bulletOffset,0.5f), Quaternion.identity);
+            //Play Shoot Sound
             AudioManager.instance.PlaySFXClip(shootSFX, transform, 0.5f);
         }
     }
