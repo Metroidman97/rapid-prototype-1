@@ -123,3 +123,5 @@ MonoBehaviour:
   input: 0
   lives: 3
   bulletPrefab: {fileID: 7954565256047884563, guid: 026afc5c58fd9914a810d6e81c2c2f55, type: 3}
+  shootSFX: {fileID: 8300000, guid: 65ec5878f27ccb8499703e015e650774, type: 3}
+  deathSFX: {fileID: 8300000, guid: b8182b59000016a4eae49f585f7b7db6, type: 3}
