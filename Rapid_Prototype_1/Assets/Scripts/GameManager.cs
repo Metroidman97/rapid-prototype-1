@@ -82,6 +82,15 @@ public class GameManager : MonoBehaviour
 
         // Check when all enemies are dead to advance to the next level
         CheckEnemiesDead();
+
+        // Remove the destroyed enemy from the enemy list
+        for (int i = 0; i < enemyList.Count; i++)
+        {
+            if (enemyList[i] == null)
+            {
+                enemyList.RemoveAt(i);
+            }
+        }
     }
 
     public void AddScore(int earnedScore)
@@ -212,8 +221,11 @@ public class GameManager : MonoBehaviour
 
     void EnemyShoot()
     {
-        GameObject enemy = EnemyListSelect();   // Select an enemy from the enemy list
-        enemy.GetComponent<Enemy>().Shoot();    // Enemy fires their weapon
+        if (remainingEnemies > 0)
+        {
+            GameObject enemy = EnemyListSelect();   // Select an enemy from the enemy list
+            enemy.GetComponent<Enemy>().Shoot();    // Enemy fires their weapon
+        }
     }
 
     /*

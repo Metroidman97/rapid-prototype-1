@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8120786689046414957}
   - component: {fileID: 8132861422558414782}
   - component: {fileID: 2730838094552166008}
+  - component: {fileID: -8017034161506006613}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -104,3 +105,30 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7954565256047884563, guid: 026afc5c58fd9914a810d6e81c2c2f55, type: 3}
   shootSFX: {fileID: 0}
   deathSFX: {fileID: 0}
+--- !u!50 &-8017034161506006613
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3607792371863254821}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

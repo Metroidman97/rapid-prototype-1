@@ -11,7 +11,7 @@ public class Explosion : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        AudioManager.instance.PlaySFXClip(explosionSFX, transform, 1f);
+        AudioSource.PlayClipAtPoint(explosionSFX, transform.position, 1f);
         Destroy(this.gameObject, duration);
     }
 

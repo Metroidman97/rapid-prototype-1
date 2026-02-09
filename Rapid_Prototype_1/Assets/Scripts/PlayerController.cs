@@ -60,7 +60,26 @@ public class PlayerController : MonoBehaviour
         {
             Instantiate(bulletPrefab, transform.position + new Vector3(bulletOffset,0.5f), Quaternion.identity);
             //Play Shoot Sound
-            AudioManager.instance.PlaySFXClip(shootSFX, transform, 0.5f);
+            AudioSource.PlayClipAtPoint(shootSFX, transform.position, 1f);
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "enemy")
+        {
+            Destroy(collision.gameObject);
+            lives--;
+            if (lives <= 0)
+            {
+                Die();
+            }
+            Debug.Log("Hit");
+        }
+    }
+
+    void Die()
+    {
+        Debug.Log("I am ded");
     }
 }
