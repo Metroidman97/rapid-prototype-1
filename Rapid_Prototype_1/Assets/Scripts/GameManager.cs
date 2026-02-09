@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
     // Player object
     public GameObject playerPrefab;
 
+    private bool playerDead;
+
     // UI elements
     public TextMeshProUGUI scoreText;
 
@@ -60,6 +62,7 @@ public class GameManager : MonoBehaviour
 
         // Spawn player
         Instantiate(playerPrefab, new Vector2(0, -4f), Quaternion.identity);
+        playerDead = false;
 
         // Set up enemy spawn grid and spawn enemies
         SpawnEnemies();
@@ -89,6 +92,14 @@ public class GameManager : MonoBehaviour
             if (enemyList[i] == null)
             {
                 enemyList.RemoveAt(i);
+            }
+        }
+
+        if (playerDead)
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
     }
@@ -208,7 +219,15 @@ public class GameManager : MonoBehaviour
         if (remainingEnemies == 0 && Input.GetKeyDown(KeyCode.Space))
         {
             // Code to advance to the next scene goes here
-            Debug.Log("Next Level");
+            switch (SceneManager.GetActiveScene().name)
+            {
+                case "Level1":
+                    SceneManager.LoadScene("Level2");
+                    break;
+                case "Level2":
+                    SceneManager.LoadScene("Win Screen");
+                    break;
+            }
         }
     }
 
@@ -258,5 +277,10 @@ public class GameManager : MonoBehaviour
         selectedEnemy = enemyList[listIndex];
 
         return selectedEnemy;
+    }
+
+    public void PlayerIsDead()
+    {
+        playerDead = true;
     }
 }

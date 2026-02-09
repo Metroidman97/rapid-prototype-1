@@ -81,5 +81,6 @@ public class PlayerController : MonoBehaviour
     void Die()
     {
         Debug.Log("I am ded");
+        gameManager.PlayerIsDead();
     }
 }
