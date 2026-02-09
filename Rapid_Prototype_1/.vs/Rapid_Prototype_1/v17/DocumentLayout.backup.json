@@ -7,24 +7,24 @@
       "RelativeMoniker": "D:0:0:{CEA888C6-B799-515A-D2E0-425150809309}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CEA888C6-B799-515A-D2E0-425150809309}|Assembly-CSharp.csproj|D:\\Learning Folder\\GitHub\\rapid-prototype-1\\Rapid_Prototype_1\\assets\\scripts\\explosion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CEA888C6-B799-515A-D2E0-425150809309}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\explosion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CEA888C6-B799-515A-D2E0-425150809309}|Assembly-CSharp.csproj|D:\\Learning Folder\\GitHub\\rapid-prototype-1\\Rapid_Prototype_1\\assets\\scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CEA888C6-B799-515A-D2E0-425150809309}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CEA888C6-B799-515A-D2E0-425150809309}|Assembly-CSharp.csproj|D:\\Learning Folder\\GitHub\\rapid-prototype-1\\Rapid_Prototype_1\\assets\\scripts\\mainmenumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEA888C6-B799-515A-D2E0-425150809309}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mainmenumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CEA888C6-B799-515A-D2E0-425150809309}|Assembly-CSharp.csproj|D:\\Learning Folder\\GitHub\\rapid-prototype-1\\Rapid_Prototype_1\\assets\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CEA888C6-B799-515A-D2E0-425150809309}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CEA888C6-B799-515A-D2E0-425150809309}|Assembly-CSharp.csproj|D:\\Learning Folder\\GitHub\\rapid-prototype-1\\Rapid_Prototype_1\\assets\\scripts\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CEA888C6-B799-515A-D2E0-425150809309}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CEA888C6-B799-515A-D2E0-425150809309}|Assembly-CSharp.csproj|D:\\Learning Folder\\GitHub\\rapid-prototype-1\\Rapid_Prototype_1\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CEA888C6-B799-515A-D2E0-425150809309}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEA888C6-B799-515A-D2E0-425150809309}|Assembly-CSharp.csproj|D:\\Learning Folder\\GitHub\\rapid-prototype-1\\Rapid_Prototype_1\\assets\\scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEA888C6-B799-515A-D2E0-425150809309}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEA888C6-B799-515A-D2E0-425150809309}|Assembly-CSharp.csproj|D:\\Learning Folder\\GitHub\\rapid-prototype-1\\Rapid_Prototype_1\\assets\\scripts\\explosion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEA888C6-B799-515A-D2E0-425150809309}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\explosion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,49 +38,49 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AudioManager.cs",
-              "DocumentMoniker": "D:\\Learning Folder\\GitHub\\rapid-prototype-1\\Rapid_Prototype_1\\Assets\\Scripts\\AudioManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\AudioManager.cs",
-              "ToolTip": "D:\\Learning Folder\\GitHub\\rapid-prototype-1\\Rapid_Prototype_1\\Assets\\Scripts\\AudioManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\AudioManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "MainMenuManager.cs",
+              "DocumentMoniker": "D:\\Learning Folder\\GitHub\\rapid-prototype-1\\Rapid_Prototype_1\\Assets\\Scripts\\MainMenuManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MainMenuManager.cs",
+              "ToolTip": "D:\\Learning Folder\\GitHub\\rapid-prototype-1\\Rapid_Prototype_1\\Assets\\Scripts\\MainMenuManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MainMenuManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-08T01:21:18.095Z"
+              "WhenOpened": "2026-02-09T03:31:46.39Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Explosion.cs",
               "DocumentMoniker": "D:\\Learning Folder\\GitHub\\rapid-prototype-1\\Rapid_Prototype_1\\Assets\\Scripts\\Explosion.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Explosion.cs",
               "ToolTip": "D:\\Learning Folder\\GitHub\\rapid-prototype-1\\Rapid_Prototype_1\\Assets\\Scripts\\Explosion.cs",
               "RelativeToolTip": "Assets\\Scripts\\Explosion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABHAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-02T01:41:28.347Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Enemy.cs",
               "DocumentMoniker": "D:\\Learning Folder\\GitHub\\rapid-prototype-1\\Rapid_Prototype_1\\Assets\\Scripts\\Enemy.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy.cs",
               "ToolTip": "D:\\Learning Folder\\GitHub\\rapid-prototype-1\\Rapid_Prototype_1\\Assets\\Scripts\\Enemy.cs",
               "RelativeToolTip": "Assets\\Scripts\\Enemy.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAIwGwAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-02T01:16:33.96Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Bullet.cs",
               "DocumentMoniker": "D:\\Learning Folder\\GitHub\\rapid-prototype-1\\Rapid_Prototype_1\\Assets\\Scripts\\Bullet.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Bullet.cs",
               "ToolTip": "D:\\Learning Folder\\GitHub\\rapid-prototype-1\\Rapid_Prototype_1\\Assets\\Scripts\\Bullet.cs",
               "RelativeToolTip": "Assets\\Scripts\\Bullet.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABRAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAABTAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-01T01:33:05.409Z"
             },
@@ -92,20 +92,20 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
               "ToolTip": "D:\\Learning Folder\\GitHub\\rapid-prototype-1\\Rapid_Prototype_1\\Assets\\Scripts\\PlayerController.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowD4AAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-01T01:02:48.222Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "GameManager.cs",
               "DocumentMoniker": "D:\\Learning Folder\\GitHub\\rapid-prototype-1\\Rapid_Prototype_1\\Assets\\Scripts\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
               "ToolTip": "D:\\Learning Folder\\GitHub\\rapid-prototype-1\\Rapid_Prototype_1\\Assets\\Scripts\\GameManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAALoAAAAAAAAAAAAjwNcAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-01T00:50:19.818Z"
             }
