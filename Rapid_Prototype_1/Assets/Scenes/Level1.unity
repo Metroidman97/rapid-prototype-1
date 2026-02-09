@@ -430,6 +430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenLimit: 0
   screenTop: 0
+  screenBottom: 0
   enemy1Prefab: {fileID: 8784923794602885367, guid: 1972139d8bfe4fe4ba283064a3a90a45, type: 3}
   enemy2Prefab: {fileID: 8784923794602885367, guid: 62cb15b9f4a67a648aa6c03774dc5ab9, type: 3}
   enemy3Prefab: {fileID: 8784923794602885367, guid: 587406990f2094449b4afa4075bcf5ed, type: 3}

@@ -4,18 +4,25 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    // Prefabs
     public GameObject explosionPrefab;
     public GameObject enemyBulletPrefab;
 
     private GameManager gameManager;
 
+    // The score value awarded upon death
     private int scoreValue;
 
+    // Offscreen starting position
     private Vector2 rowSpawn;
 
+    // Position in the formation
     private Vector2 formationPosition;
 
+    // Row number in the formation
     private int rowNum;
+
+    //public bool isMoving = true;
 
     // Start is called before the first frame update
     void Start()
@@ -34,15 +41,15 @@ public class Enemy : MonoBehaviour
     {
         // Move the enemy to its position in the formation
         StartCoroutine(MoveToPosition());
-        
-        /*
-        if (gameManager.EveryoneInPosition())
+
+        if ((transform.position.x == formationPosition.x) && (transform.position.y == formationPosition.y))
         {
-            Debug.Log("Everyone is in position");
+            //isMoving = false;
+            StopCoroutine(nameof(MoveToPosition));
         }
-        */
     }
 
+    // When hit by player bullet
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "bullet")
@@ -76,6 +83,7 @@ public class Enemy : MonoBehaviour
         gameObject.transform.position = rowSpawn;
     }
 
+    // Move into formation position from offscreen
     IEnumerator MoveToPosition()
     {
         float waitTime = 0f;
@@ -94,16 +102,34 @@ public class Enemy : MonoBehaviour
 
         yield return new WaitForSeconds(waitTime);
         transform.position = Vector2.MoveTowards(transform.position, formationPosition, Time.deltaTime * 6f);
-        /*
-        if ((transform.position.x == formationPosition.x) && (transform.position.y == formationPosition.y))
-        {
-            gameManager.EnemyInPosition();
-        }
-        */
     }
 
-    void Shoot()
+    public void Shoot()
     {
-        Instantiate(enemyBulletPrefab, transform.position, Quaternion.Euler(0, 180, 0));
+        Instantiate(enemyBulletPrefab, transform.position, Quaternion.Euler(0, 0, 180));
+
+        //Debug.Log("Pow");
     }
+
+    /*
+    public IEnumerator Move()
+    {
+        //isMoving = true;
+
+        //Vector2 newPosition = new Vector2(0f, -6f);
+        Vector2 newPosition = gameManager.playerPrefab.transform.position;
+
+        yield return new WaitForEndOfFrame();
+        transform.position = Vector2.MoveTowards(transform.position, newPosition, Time.deltaTime * 2f);
+
+        if ((transform.position.x == newPosition.x) && (transform.position.y == newPosition.y))
+        {
+            //transform.position = formationPosition;
+        }
+
+        //Debug.Log(newPosition);
+
+        //yield return null;
+    }
+    */
 }

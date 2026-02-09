@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 1741948569076929102, guid: 8992e2f0fd9f0e24c88143e5f1585c8e, type: 3}
+  enemyBulletPrefab: {fileID: 5048391314928481763, guid: f7c3d33f251a88a42b16f246c1ee6a28, type: 3}
 --- !u!50 &6923550945276211210
 Rigidbody2D:
   serializedVersion: 4

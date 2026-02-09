@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     // Playable area definition
     public float screenLimit;
     public float screenTop;
+    public float screenBottom;
 
     // Enemy prefabs
     public GameObject enemy1Prefab;
@@ -48,6 +49,7 @@ public class GameManager : MonoBehaviour
         // Set playable area
         screenLimit = 6f;
         screenTop = 12f;
+        screenBottom = -6f;
 
         // Set score to 0 and prepare score UI
         score = 0;
@@ -61,6 +63,12 @@ public class GameManager : MonoBehaviour
 
         // Set up enemy spawn grid and spawn enemies
         SpawnEnemies();
+
+        // Wait until all enemies are in position, then randomly call an enemy from the list to divebomb the player
+        //InvokeRepeating(nameof(SelectEnemy), 15f, 5f);
+
+        // Make the enemies shoot
+        InvokeRepeating(nameof(EnemyShoot), 15f, 3f);
     }
 
     // Update is called once per frame
@@ -72,9 +80,8 @@ public class GameManager : MonoBehaviour
             Application.Quit();
         }
 
-        CheckEnemies();
-
-        // Wait until all enemies are in position, then randomly call an enemy from the list to divebomb the player
+        // Check when all enemies are dead to advance to the next level
+        CheckEnemiesDead();
     }
 
     public void AddScore(int earnedScore)
@@ -186,7 +193,7 @@ public class GameManager : MonoBehaviour
         remainingEnemies--;
     }
 
-    void CheckEnemies()
+    void CheckEnemiesDead()
     {
         // Check if every enemy has been killed
         if (remainingEnemies == 0 && Input.GetKeyDown(KeyCode.Space))
@@ -197,21 +204,47 @@ public class GameManager : MonoBehaviour
     }
 
     /*
-    public void EnemyInPosition()
+    void SelectEnemy()
     {
-        inPosition++;
-    }
-
-    public bool EveryoneInPosition()
-    {
-        if ((level == "Level1" && inPosition == 15) || (level == "Level2" && inPosition == 15))
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        StartCoroutine(nameof(MoveEnemy));
     }
     */
+
+    void EnemyShoot()
+    {
+        GameObject enemy = EnemyListSelect();   // Select an enemy from the enemy list
+        enemy.GetComponent<Enemy>().Shoot();    // Enemy fires their weapon
+    }
+
+    /*
+    IEnumerator MoveEnemy()
+    {
+        GameObject selectedEnemy = EnemyListSelect();
+
+        
+        while (selectedEnemy.GetComponent<Enemy>().isMoving == true)
+        {
+            selectedEnemy = EnemyListSelect();
+            yield return null;
+        }
+        
+
+        StartCoroutine(selectedEnemy.GetComponent<Enemy>().Move());
+        yield return null;
+        
+    }
+    */
+
+    GameObject EnemyListSelect()
+    {
+        int listIndex;
+
+        GameObject selectedEnemy;
+
+        listIndex = Random.Range(0, enemyList.Count);
+
+        selectedEnemy = enemyList[listIndex];
+
+        return selectedEnemy;
+    }
 }
