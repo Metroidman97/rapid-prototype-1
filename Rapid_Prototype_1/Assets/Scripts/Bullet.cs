@@ -22,10 +22,11 @@ public class Bullet : MonoBehaviour
         // Make the bullet move forward, regardless of direction
         transform.Translate(new Vector2(0, 1) * Time.deltaTime * speed);
 
-        // Delete bullet when it reaches the top of the screen
+        // Delete bullet when it reaches the top or bottom of the screen
         float screenTop = gameManager.screenTop;
+        float screenBottom = gameManager.screenBottom;
         
-        if (transform.position.y > screenTop)
+        if (transform.position.y > screenTop || transform.position.y < screenBottom)
         {
             Destroy(this.gameObject);
         }

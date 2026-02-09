@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     // Playable area definition
     public float screenLimit;
     public float screenTop;
+    public float screenBottom;
 
     // Enemy prefabs
     public GameObject enemy1Prefab;
@@ -36,12 +37,19 @@ public class GameManager : MonoBehaviour
     // Number of currently active enemies
     private int remainingEnemies = 0;
 
+    // Number of enemies in their final position
+    //private int inPosition = 0;
+
+    // Enemy list
+    private List<GameObject> enemyList = new List<GameObject>();
+
     // Start is called before the first frame update
     void Start()
     {
         // Set playable area
         screenLimit = 6f;
         screenTop = 12f;
+        screenBottom = -6f;
 
         // Set score to 0 and prepare score UI
         score = 0;
@@ -55,6 +63,12 @@ public class GameManager : MonoBehaviour
 
         // Set up enemy spawn grid and spawn enemies
         SpawnEnemies();
+
+        // Wait until all enemies are in position, then randomly call an enemy from the list to divebomb the player
+        //InvokeRepeating(nameof(SelectEnemy), 15f, 5f);
+
+        // Make the enemies shoot
+        InvokeRepeating(nameof(EnemyShoot), 15f, 3f);
     }
 
     // Update is called once per frame
@@ -66,7 +80,8 @@ public class GameManager : MonoBehaviour
             Application.Quit();
         }
 
-        CheckEnemies();
+        // Check when all enemies are dead to advance to the next level
+        CheckEnemiesDead();
     }
 
     public void AddScore(int earnedScore)
@@ -124,10 +139,50 @@ public class GameManager : MonoBehaviour
 
             for (int j = 0; j < spawnGrid[i].Length; j++)
             {
-                Instantiate(enemy1Prefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity);
+                switch (i)
+                {
+                    case 0:
+                        if (level == "Level1")
+                        {
+                            enemyList.Add(Instantiate(enemy3Prefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity));    // Spawn different enemies in different rows
+                            remainingEnemies++;     // Increment the enemy counter with each spawn
+                        }
+                        else if (level == "Level2")
+                        {
+                            enemyList.Add(Instantiate(enemy6Prefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity));    // Spawn different enemies based on the current level
+                            remainingEnemies++;
+                        }
+                        break;
 
-                // Increment the enemy counter with each spawn
-                remainingEnemies++;
+                    case 1:
+                        if (level == "Level1")
+                        {
+                            enemyList.Add(Instantiate(enemy2Prefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity));    
+                            remainingEnemies++;     
+                        }
+                        else if (level == "Level2")
+                        {
+                            enemyList.Add(Instantiate(enemy5Prefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity));    
+                            remainingEnemies++;
+                        }
+                        break;
+
+                    case 2:
+                        if (level == "Level1")
+                        {
+                            enemyList.Add(Instantiate(enemy1Prefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity));
+                            remainingEnemies++;
+                        }
+                        else if (level == "Level2")
+                        {
+                            enemyList.Add(Instantiate(enemy4Prefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity));    
+                            remainingEnemies++;
+                        }
+                        break;
+                }
+                
+
+                
             }
         }
     }
@@ -138,7 +193,7 @@ public class GameManager : MonoBehaviour
         remainingEnemies--;
     }
 
-    void CheckEnemies()
+    void CheckEnemiesDead()
     {
         // Check if every enemy has been killed
         if (remainingEnemies == 0 && Input.GetKeyDown(KeyCode.Space))
@@ -146,5 +201,50 @@ public class GameManager : MonoBehaviour
             // Code to advance to the next scene goes here
             Debug.Log("Next Level");
         }
+    }
+
+    /*
+    void SelectEnemy()
+    {
+        StartCoroutine(nameof(MoveEnemy));
+    }
+    */
+
+    void EnemyShoot()
+    {
+        GameObject enemy = EnemyListSelect();   // Select an enemy from the enemy list
+        enemy.GetComponent<Enemy>().Shoot();    // Enemy fires their weapon
+    }
+
+    /*
+    IEnumerator MoveEnemy()
+    {
+        GameObject selectedEnemy = EnemyListSelect();
+
+        
+        while (selectedEnemy.GetComponent<Enemy>().isMoving == true)
+        {
+            selectedEnemy = EnemyListSelect();
+            yield return null;
+        }
+        
+
+        StartCoroutine(selectedEnemy.GetComponent<Enemy>().Move());
+        yield return null;
+        
+    }
+    */
+
+    GameObject EnemyListSelect()
+    {
+        int listIndex;
+
+        GameObject selectedEnemy;
+
+        listIndex = Random.Range(0, enemyList.Count);
+
+        selectedEnemy = enemyList[listIndex];
+
+        return selectedEnemy;
     }
 }
