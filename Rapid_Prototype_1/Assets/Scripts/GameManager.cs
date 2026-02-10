@@ -29,6 +29,9 @@ public class GameManager : MonoBehaviour
     public SceneLoader sceneLoader;
     private bool playerDead;
 
+    // Check if all enemies dead
+    private bool enemiesDead = false;
+
     // UI elements
     public TextMeshProUGUI scoreText;
     public Image livesCounter;
@@ -96,6 +99,22 @@ public class GameManager : MonoBehaviour
 
         // Check when all enemies are dead to advance to the next level
         CheckEnemiesDead();
+        if(enemiesDead)
+        {
+            switch (level)
+            {
+                // Enemy formation for level 1
+                case "Level1":
+                    levelEnd.SetTrigger("Level Complete");
+                    break;
+
+                // Enemy formation for level 2
+                case "Level2":
+                    levelEnd.SetTrigger("Victory");
+                    break;
+
+            }
+        }
 
         // Remove the destroyed enemy from the enemy list
         for (int i = 0; i < enemyList.Count; i++)
@@ -219,17 +238,14 @@ public class GameManager : MonoBehaviour
     void CheckEnemiesDead()
     {
         // Check if every enemy has been killed
-        if (remainingEnemies == 0 && Input.GetKeyDown(KeyCode.Space))
+
+        if (remainingEnemies == 0)
         {
             // Code to advance to the next scene goes here
-            switch (SceneManager.GetActiveScene().name)
+            enemiesDead = true;
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                case "Level1":
-                    SceneManager.LoadScene("Level2");
-                    break;
-                case "Level2":
-                    SceneManager.LoadScene("Win Screen");
-                    break;
+                sceneLoader.LoadNextLevel();
             }
         }
     }
