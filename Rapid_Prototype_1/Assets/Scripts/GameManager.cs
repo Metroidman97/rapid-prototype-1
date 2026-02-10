@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
         level = SceneManager.GetActiveScene().name;
 
         // Spawn player
-        Instantiate(playerPrefab, new Vector2(0, -4f), Quaternion.identity);
+        Instantiate(playerPrefab, new Vector2(0, -3f), Quaternion.identity);
         playerDead = false;
 
         // Set up enemy spawn grid and spawn enemies
