@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
         //InvokeRepeating(nameof(SelectEnemy), 15f, 5f);
 
         // Make the enemies shoot
-        InvokeRepeating(nameof(EnemyShoot), 15f, 3f);
+        InvokeRepeating(nameof(EnemyShoot), 10f, 1f);
     }
 
     // Update is called once per frame
