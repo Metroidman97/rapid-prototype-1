@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
 
     // Player object
     public GameObject playerPrefab;
-
+    public SceneLoader sceneLoader;
     private bool playerDead;
 
     // UI elements
@@ -44,6 +44,9 @@ public class GameManager : MonoBehaviour
     public Sprite lives1;
     public Sprite lives2;
     public Sprite lives3;
+
+    // Animator for Game Over screen
+    public Animator levelEnd;
 
     // Enemy list
     private List<GameObject> enemyList = new List<GameObject>();
@@ -86,6 +89,11 @@ public class GameManager : MonoBehaviour
             Application.Quit();
         }
 
+        if (playerDead && Input.GetKeyDown(KeyCode.R))
+        {
+            sceneLoader.ReloadLevel();
+        }
+
         // Check when all enemies are dead to advance to the next level
         CheckEnemiesDead();
 
@@ -95,14 +103,6 @@ public class GameManager : MonoBehaviour
             if (enemyList[i] == null)
             {
                 enemyList.RemoveAt(i);
-            }
-        }
-
-        if (playerDead)
-        {
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
     }
@@ -285,6 +285,7 @@ public class GameManager : MonoBehaviour
     public void PlayerIsDead()
     {
         playerDead = true;
+        levelEnd.SetTrigger("Game Over");
     }
     
     public void UpdateLivesCounter(int currentLives)
