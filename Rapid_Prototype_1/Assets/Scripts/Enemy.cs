@@ -64,17 +64,17 @@ public class Enemy : MonoBehaviour
 
     void GetRowSpawn()
     {
-        if (gameObject.name == "Enemy1(Clone)" || gameObject.name == "Enemy4(Clone)")
+        if (gameObject.name == "BO_Bug_Enemy(Clone)" || gameObject.name == "CWF_Bug_Enemy(Clone)")
         {
             rowSpawn = GameObject.Find("Row3Spawn").transform.position;
             rowNum = 3;
         }
-        else if (gameObject.name == "Enemy2(Clone)" || gameObject.name == "Enemy5(Clone)")
+        else if (gameObject.name == "MW_Bug_Enemy(Clone)" || gameObject.name == "Enemy5(Clone)")
         {
             rowSpawn = GameObject.Find("Row2Spawn").transform.position;
             rowNum = 2;
         }
-        else if (gameObject.name == "Enemy3(Clone)" || gameObject.name == "Enemy6(Clone)")
+        else if (gameObject.name == "Cat_Bug_Enemy(Clone)" || gameObject.name == "Bee_Bug_Enemy(Clone)")
         {
             rowSpawn = GameObject.Find("Row1Spawn").transform.position;
             rowNum = 1;
