@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{CEA888C6-B799-515A-D2E0-425150809309}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CEA888C6-B799-515A-D2E0-425150809309}|Assembly-CSharp.csproj|D:\\Learning Folder\\GitHub\\rapid-prototype-1\\Rapid_Prototype_1\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CEA888C6-B799-515A-D2E0-425150809309}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{94AAB9D1-BE23-EC0E-0207-0A7C4D4EA3D3}|Assembly-CSharp.Player.csproj|D:\\Learning Folder\\GitHub\\rapid-prototype-1\\Rapid_Prototype_1\\assets\\scripts\\sceneloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{94AAB9D1-BE23-EC0E-0207-0A7C4D4EA3D3}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\sceneloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEA888C6-B799-515A-D2E0-425150809309}|Assembly-CSharp.csproj|D:\\Learning Folder\\GitHub\\rapid-prototype-1\\Rapid_Prototype_1\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEA888C6-B799-515A-D2E0-425150809309}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CEA888C6-B799-515A-D2E0-425150809309}|Assembly-CSharp.csproj|D:\\Learning Folder\\GitHub\\rapid-prototype-1\\Rapid_Prototype_1\\assets\\scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,15 +38,16 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "SceneLoader.cs",
               "DocumentMoniker": "D:\\Learning Folder\\GitHub\\rapid-prototype-1\\Rapid_Prototype_1\\Assets\\Scripts\\SceneLoader.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SceneLoader.cs",
               "ToolTip": "D:\\Learning Folder\\GitHub\\rapid-prototype-1\\Rapid_Prototype_1\\Assets\\Scripts\\SceneLoader.cs",
               "RelativeToolTip": "Assets\\Scripts\\SceneLoader.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T00:13:25.276Z"
+              "WhenOpened": "2026-02-10T00:13:25.276Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -86,7 +87,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "D:\\Learning Folder\\GitHub\\rapid-prototype-1\\Rapid_Prototype_1\\Assets\\Scripts\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
@@ -104,7 +105,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
               "ToolTip": "D:\\Learning Folder\\GitHub\\rapid-prototype-1\\Rapid_Prototype_1\\Assets\\Scripts\\GameManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAWwHUAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4BAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-01T00:50:19.818Z",
               "EditorCaption": ""
