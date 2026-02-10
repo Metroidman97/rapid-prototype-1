@@ -19,6 +19,11 @@ public class SceneLoader : MonoBehaviour
         StartCoroutine(LoadLevel(0));
     }
 
+    public void ReloadLevel()
+    {
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex));
+    }
+
     IEnumerator LoadLevel(int levelIndex)
     {
         //Play Transition Animation
