@@ -13,12 +13,12 @@ public class GameManager : MonoBehaviour
     public float screenBottom;
 
     // Enemy prefabs
-    public GameObject enemy1Prefab;
+    public GameObject BO_Bug_EnemyPrefab;
     public GameObject enemy2Prefab;
-    public GameObject enemy3Prefab;
-    public GameObject enemy4Prefab;
-    public GameObject enemy5Prefab;
-    public GameObject enemy6Prefab;
+    public GameObject Cat_Bug_EnemyPrefab;
+    public GameObject CWF_Bug_EnemyPrefab;
+    public GameObject MW_Bug_EnemyPrefab;
+    public GameObject Bee_Bug_EnemyPrefab;
 
     // Enemy spawn grid array
     private float[][] spawnGrid = new float[3][];
@@ -164,12 +164,12 @@ public class GameManager : MonoBehaviour
                     case 0:
                         if (level == "Level1")
                         {
-                            enemyList.Add(Instantiate(enemy3Prefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity));    // Spawn different enemies in different rows
+                            enemyList.Add(Instantiate(Cat_Bug_EnemyPrefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity));    // Spawn different enemies in different rows
                             remainingEnemies++;     // Increment the enemy counter with each spawn
                         }
                         else if (level == "Level2")
                         {
-                            enemyList.Add(Instantiate(enemy6Prefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity));    // Spawn different enemies based on the current level
+                            enemyList.Add(Instantiate(Bee_Bug_EnemyPrefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity));    // Spawn different enemies based on the current level
                             remainingEnemies++;
                         }
                         break;
@@ -182,7 +182,7 @@ public class GameManager : MonoBehaviour
                         }
                         else if (level == "Level2")
                         {
-                            enemyList.Add(Instantiate(enemy5Prefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity));    
+                            enemyList.Add(Instantiate(MW_Bug_EnemyPrefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity));    
                             remainingEnemies++;
                         }
                         break;
@@ -190,12 +190,12 @@ public class GameManager : MonoBehaviour
                     case 2:
                         if (level == "Level1")
                         {
-                            enemyList.Add(Instantiate(enemy1Prefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity));
+                            enemyList.Add(Instantiate(BO_Bug_EnemyPrefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity));
                             remainingEnemies++;
                         }
                         else if (level == "Level2")
                         {
-                            enemyList.Add(Instantiate(enemy4Prefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity));    
+                            enemyList.Add(Instantiate(CWF_Bug_EnemyPrefab, new Vector2(spawnGrid[i][j], Yposition), Quaternion.identity));    
                             remainingEnemies++;
                         }
                         break;
