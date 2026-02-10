@@ -69,7 +69,7 @@ public class Enemy : MonoBehaviour
             rowSpawn = GameObject.Find("Row3Spawn").transform.position;
             rowNum = 3;
         }
-        else if (gameObject.name == "MW_Bug_Enemy(Clone)" || gameObject.name == "Enemy5(Clone)")
+        else if (gameObject.name == "MW_Bug_Enemy(Clone)" || gameObject.name == "CitrusMealybug1(Clone)")
         {
             rowSpawn = GameObject.Find("Row2Spawn").transform.position;
             rowNum = 2;
