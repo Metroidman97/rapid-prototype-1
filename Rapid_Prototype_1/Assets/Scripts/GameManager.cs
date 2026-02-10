@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 using Unity.VisualScripting;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -30,7 +31,7 @@ public class GameManager : MonoBehaviour
 
     // UI elements
     public TextMeshProUGUI scoreText;
-
+    public Image livesCounter;
     public int score;
 
     // Current level
@@ -39,8 +40,10 @@ public class GameManager : MonoBehaviour
     // Number of currently active enemies
     private int remainingEnemies = 0;
 
-    // Number of enemies in their final position
-    //private int inPosition = 0;
+    // Sprites for lives counter
+    public Sprite lives1;
+    public Sprite lives2;
+    public Sprite lives3;
 
     // Enemy list
     private List<GameObject> enemyList = new List<GameObject>();
@@ -282,5 +285,21 @@ public class GameManager : MonoBehaviour
     public void PlayerIsDead()
     {
         playerDead = true;
+    }
+    
+    public void UpdateLivesCounter(int currentLives)
+    {
+        switch (currentLives)
+        {
+            case 1:
+                livesCounter.sprite = lives1;
+                break;
+            case 2:
+                livesCounter.sprite = lives2;
+                break;
+            case 3:
+                livesCounter.sprite = lives3;
+                break;
+        }
     }
 }

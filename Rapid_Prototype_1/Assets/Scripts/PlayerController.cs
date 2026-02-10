@@ -74,6 +74,10 @@ public class PlayerController : MonoBehaviour
             {
                 Die();
             }
+            else
+            {
+                gameManager.UpdateLivesCounter(lives);
+            }    
             Debug.Log("Hit");
         }
     }
