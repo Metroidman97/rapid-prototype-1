@@ -259,7 +259,7 @@ public class GameManager : MonoBehaviour
 
     void EnemyShoot()
     {
-        if (remainingEnemies > 0)
+        if (remainingEnemies > 0 && !playerDead)
         {
             GameObject enemy = EnemyListSelect();   // Select an enemy from the enemy list
             enemy.GetComponent<Enemy>().Shoot();    // Enemy fires their weapon

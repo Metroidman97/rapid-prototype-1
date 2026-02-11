@@ -9,12 +9,14 @@ public class PlayerController : MonoBehaviour
     public float input;
     public float bulletOffset = 0.25f;
     public int lives;
+    private bool isDead = false;
 
     private GameManager gameManager;
 
     public GameObject bulletPrefab;
 
     [SerializeField] private AudioClip shootSFX;
+    [SerializeField] private AudioClip hurtSFX;
     [SerializeField] private AudioClip deathSFX;
 
     // Start is called before the first frame update
@@ -27,8 +29,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
-        Shoot();
+        if (!isDead)
+        {
+            Move();
+            Shoot();
+        }
     }
 
     // Control the player
@@ -70,6 +75,7 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(collision.gameObject);
             lives--;
+            AudioSource.PlayClipAtPoint(hurtSFX, transform.position, 2f);
             if (lives <= 0)
             {
                 Die();
@@ -78,13 +84,15 @@ public class PlayerController : MonoBehaviour
             {
                 gameManager.UpdateLivesCounter(lives);
             }    
-            Debug.Log("Hit");
+            //Debug.Log("Hit");
         }
     }
 
     void Die()
     {
-        Debug.Log("I am ded");
+        //Debug.Log("I am ded");
+        isDead = true;
+        AudioSource.PlayClipAtPoint(deathSFX, transform.position, 2f);
         gameManager.PlayerIsDead();
     }
 }
